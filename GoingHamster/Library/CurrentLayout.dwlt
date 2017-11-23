@@ -41,8 +41,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1920
     height: 1037
+=======
+    width: 1536
+    height: 781
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
   m_MinSize: {x: 950, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
@@ -106,12 +111,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1920
     height: 987
   m_MinSize: {x: 913, y: 442}
   m_MaxSize: {x: 22008, y: 10021}
   vertical: 0
   controlID: 25462
+=======
+    width: 1536
+    height: 731
+  m_MinSize: {x: 913, y: 442}
+  m_MaxSize: {x: 22008, y: 10021}
+  vertical: 0
+  controlID: 7287
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,12 +144,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1031
     height: 987
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
   controlID: 25463
+=======
+    width: 712
+    height: 731
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 7199
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -440,9 +463,15 @@ MonoBehaviour:
     height: 966
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: bc49fcff
     m_LastClickedID: -243268
     m_ExpandedIDs: 4ae7fffff6eaffff0000000094340000
+=======
+    m_SelectedIDs: c0a4feff
+    m_LastClickedID: -88896
+    m_ExpandedIDs: baa4feffc0a4feff7417ffff7a17ffff96fbffff98fbffff00000000c02c0000242d0000562d0000
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,19 +532,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Prefabs
+=======
+    - Assets/TZounds
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/TZounds
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Dak19\Desktop\Media Systems\IMP\IMPProjekt\GoingHamster\GoingHamster
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: ae340000
     m_LastClickedID: 13486
     m_ExpandedIDs: 000000009c2e0000a22e0000e630000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 24280000
+    m_LastClickedID: 10276
+    m_ExpandedIDs: 000000005c2700006027000000ca9a3bffffff7f
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -543,7 +586,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000009c2e0000a22e0000e630000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 000000005c2700006027000000ca9a3bffffff7f
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -622,9 +669,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1575
     y: 92
+<<<<<<< HEAD
     width: 345
     height: 966
   m_ScrollPosition: {x: 0, y: 0}
+=======
+    width: 341
+    height: 710
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_ScrollPosition: {x: 0, y: 0.9550781}
+>>>>>>> a8f5b8387dbe265090ac8e8d4b4b3ca276e7f25f
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: -160
