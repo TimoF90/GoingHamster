@@ -8,9 +8,13 @@ public class HamsterScript : MonoBehaviour {
     public Rigidbody2D hook;
     public float releaseTime = 0.15f;
     public float MaxDragDistance = 2f;
+    public float JumpEnergy = 5f;
+    public float JumpPower = 100f;
+    
 
 
     private bool isPressed = false;
+    private int releaseCounter = 0;
 
     void Update()
     {
@@ -22,13 +26,20 @@ public class HamsterScript : MonoBehaviour {
 
             else
                 rb.position = mousePos;
+
+
         }
+
+        
+
     }
 
     void OnMouseDown()
     {
         isPressed = true;
         rb.isKinematic = true;
+
+        
     }
 
     void OnMouseUp()
@@ -37,7 +48,12 @@ public class HamsterScript : MonoBehaviour {
         rb.isKinematic = false;
 
         StartCoroutine(Release());
+
+        releaseCounter++;
+        
     }
+
+    
 
     IEnumerator Release()
     {
