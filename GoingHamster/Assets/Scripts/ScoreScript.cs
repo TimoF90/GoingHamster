@@ -13,11 +13,14 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         score = GetComponent<Text>();
+        scoreValue = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         score.text = "Score: " + scoreValue;
+
+        
     }
 }

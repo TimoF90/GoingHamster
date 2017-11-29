@@ -300,13 +300,14 @@ GameObject:
   - component: {fileID: 223673889}
   - component: {fileID: 223673888}
   - component: {fileID: 223673887}
+  - component: {fileID: 223673890}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &223673886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -384,6 +385,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223673885}
+--- !u!114 &223673890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223673885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a5005d021fa9b40a5c96c7df986315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameScene: MainScene
 --- !u!1 &265998717
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +408,6 @@ GameObject:
   - component: {fileID: 265998721}
   - component: {fileID: 265998720}
   - component: {fileID: 265998719}
-  - component: {fileID: 265998722}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -461,13 +473,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 265998722}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 1642711958}
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -507,17 +519,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 265998717}
---- !u!114 &265998722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 265998717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a5005d021fa9b40a5c96c7df986315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &364749001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1013,6 @@ GameObject:
   - component: {fileID: 595836506}
   - component: {fileID: 595836505}
   - component: {fileID: 595836504}
-  - component: {fileID: 595836507}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1078,13 +1078,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 595836507}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 223673890}
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1124,17 +1124,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595836502}
---- !u!114 &595836507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 595836502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a5005d021fa9b40a5c96c7df986315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &603459891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1710,7 @@ GameObject:
   - component: {fileID: 834261763}
   - component: {fileID: 834261762}
   - component: {fileID: 834261761}
+  - component: {fileID: 834261764}
   m_Layer: 5
   m_Name: ScorePanel
   m_TagString: Untagged
@@ -1805,6 +1795,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834261759}
+--- !u!114 &834261764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834261759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a5005d021fa9b40a5c96c7df986315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameScene: MainScene
 --- !u!1 &838900909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,6 +1818,7 @@ GameObject:
   - component: {fileID: 838900913}
   - component: {fileID: 838900912}
   - component: {fileID: 838900911}
+  - component: {fileID: 838900914}
   m_Layer: 5
   m_Name: SharePanel
   m_TagString: Untagged
@@ -1900,6 +1903,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 838900909}
+--- !u!114 &838900914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838900909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a5005d021fa9b40a5c96c7df986315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameScene: MainScene
 --- !u!1 &887463311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,7 +2940,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1540824083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 834261764}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1540824083
@@ -3231,13 +3257,14 @@ GameObject:
   - component: {fileID: 1642711957}
   - component: {fileID: 1642711956}
   - component: {fileID: 1642711955}
+  - component: {fileID: 1642711958}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1642711954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3317,6 +3344,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642711953}
+--- !u!114 &1642711958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642711953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a5005d021fa9b40a5c96c7df986315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameScene: MainScene
 --- !u!1 &1650558479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,7 +3786,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1749911713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838900914}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1749911713
@@ -4305,9 +4355,9 @@ RectTransform:
   m_Father: {fileID: 364749002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1982809784
