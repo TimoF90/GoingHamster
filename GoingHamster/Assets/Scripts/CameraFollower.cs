@@ -24,6 +24,8 @@ public class CameraFollower : MonoBehaviour {
         float posX = Mathf.SmoothDamp(transform.position.x, Hamster.transform.position.x, ref velocity.x, smoothTimeX);
         float posY = Mathf.SmoothDamp(transform.position.y, Hamster.transform.position.y, ref velocity.y, smoothTimeY);
 
-        transform.position = new Vector3(posX, posY, transform.position.z);
+        transform.position = new Vector2(posX, posY);
+
+        //, transform.position.z
     }
 }

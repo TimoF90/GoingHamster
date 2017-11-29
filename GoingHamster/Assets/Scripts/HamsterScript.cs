@@ -16,6 +16,9 @@ public class HamsterScript : MonoBehaviour {
     private bool isPressed = false;
     private int releaseCounter = 0;
 
+
+    
+
     void Update()
     {
         if (isPressed)
