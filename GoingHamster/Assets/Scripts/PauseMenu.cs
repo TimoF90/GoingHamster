@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public string mainMenu;
+    public string GameScene;
 
     public bool isPaused;
     public GameObject pauseMenuCanvas;
@@ -49,7 +50,11 @@ public class PauseMenu : MonoBehaviour
         
           //  isPaused = !isPaused;
         
-    
+    public void Restart()
+    {
+        SceneManager.LoadScene(GameScene);
+        Time.timeScale = 1f;
+    }
     
     public void Resume()
     {
