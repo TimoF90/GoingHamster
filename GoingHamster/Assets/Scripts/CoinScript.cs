@@ -16,7 +16,7 @@ public class CoinScript : MonoBehaviour
         {
             if (coll.gameObject.tag.Equals ("Player"))
             {
-                ScoreScript.scoreValue += 10;
+                ScoreManager.scoreCount += 10;
                 Destroy(gameObject);
             }
 
