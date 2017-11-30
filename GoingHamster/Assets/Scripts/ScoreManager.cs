@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class ScoreManager : MonoBehaviour {
     public bool scoreIncreasing;
     public Transform ScoreMarker;
 
+    public GameObject HighscoreCanvas;
    
     public GameObject Player;
     private Vector3 startPoint;
@@ -45,6 +47,12 @@ public class ScoreManager : MonoBehaviour {
         if(scoreCount > highscoreCount)
         {
             highscoreCount = scoreCount;
+        }
+
+        if(scoreIncreasing == false)
+        {
+            HighscoreCanvas.SetActive(true);
+  
         }
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);

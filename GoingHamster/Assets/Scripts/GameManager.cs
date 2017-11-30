@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    
+    public 
 
 	// Use this for initialization
 	void Start () {
@@ -15,4 +15,14 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void RestartGame()
+    {
+        StartCoroutine("RestartGameCo"); 
+    }
+
+  /*  public IEnumerator RestartGameCo()
+    {
+
+    }*/
 }
