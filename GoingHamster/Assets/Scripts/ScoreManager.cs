@@ -12,18 +12,20 @@ public class ScoreManager : MonoBehaviour {
     public static float highscoreCount;
 
     public float pointPerSecond;
-
+    
     public bool scoreIncreasing;
     public Transform ScoreMarker;
 
-    HamsterScript TheHamsterScript;
+   
     public GameObject Player;
+    private Vector3 startPoint;
 
 
 	// Use this for initialization
 	void Start () {
-        TheHamsterScript = FindObjectOfType<HamsterScript>();
+        
         scoreCount = 0f;
+        startPoint = ScoreMarker.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -33,9 +35,10 @@ public class ScoreManager : MonoBehaviour {
 
         if (Player.transform.position.x >= ScoreMarker.transform.position.x)
         {
-
-            //scoreCount += pointPerSecond * Time.deltaTime;
-            scoreCount += ((ScoreMarker.transform.position.x - ScoreMarker.transform.position.x) + Player.transform.position.x) /100f;
+            
+            
+          scoreCount = Player.transform.position.x - startPoint.x;
+          
 
         }
 
