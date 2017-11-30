@@ -8,9 +8,10 @@ public class ScoreManager : MonoBehaviour {
 
     public Text scoreText;
     public Text highscoreText;
+    public Text highscoreText2;
 
     public static float scoreCount;
-    public static float highscoreCount;
+    public float highscoreCount;
 
     public float pointPerSecond;
     
@@ -37,11 +38,9 @@ public class ScoreManager : MonoBehaviour {
 
         if (Player.transform.position.x >= ScoreMarker.transform.position.x)
         {
-            
-            
+                       
           scoreCount = Player.transform.position.x - startPoint.x;
-          
-
+            
         }
 
         if(scoreCount > highscoreCount)
@@ -49,11 +48,12 @@ public class ScoreManager : MonoBehaviour {
             highscoreCount = scoreCount;
         }
 
-        if(scoreIncreasing == false)
+       /* if(scoreIncreasing == false)
         {
             HighscoreCanvas.SetActive(true);
-  
-        }
+            highscoreText2.text = " " + Mathf.Round(highscoreCount);
+
+        }*/
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
         highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount);
