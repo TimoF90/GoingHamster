@@ -9,6 +9,10 @@ public class PlayerFollower : MonoBehaviour {
     public Transform player;
     public Transform farLeft;
     public Transform farRight;
+    public GameObject HighscoreCanvas;
+    public float yPosition;
+    public Rigidbody2D rb;
+
 
 
 
@@ -31,8 +35,11 @@ public class PlayerFollower : MonoBehaviour {
         transform.position = new Vector3(posX, posY, transform.position.z);
 
     }
-     //   transform.position = newPosition;
+        //   transform.position = newPosition;
 
-
-	}
+        if (rb.transform.position.y < yPosition)
+        {
+            HighscoreCanvas.SetActive(true);
+        }
+    }
 }
