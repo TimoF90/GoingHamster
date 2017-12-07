@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HamsterScript : MonoBehaviour {
 
@@ -16,20 +15,9 @@ public class HamsterScript : MonoBehaviour {
 
     private bool isPressed = false;
     private int releaseCounter = 0;
-    private float speed;
-    public Text Test;
-    
+
 
     
-    private ScoreManager theScoreManager;
-
-
-
-    private void Start()
-    {
-        
-        theScoreManager = GetComponent<ScoreManager>();
-    }
 
     void Update()
     {
@@ -45,26 +33,7 @@ public class HamsterScript : MonoBehaviour {
 
         }
 
-        /* if (rb.velocity.magnitude <= 0.5f)
-         {
-             theScoreManager.HighscoreCanvas.SetActive(true);
-             theScoreManager.highscoreText2.text = " " + Mathf.Round(theScoreManager.highscoreCount);
-
-         }*/
         
-        if (GetComponent<Rigidbody2D>().IsSleeping())
-        {
-
-            Test.text = " funzt";
-
-           
-            
-                theScoreManager.HighscoreCanvas.SetActive(true);
-                theScoreManager.highscoreText2.text = " " + Mathf.Round(theScoreManager.highscoreCount);
-            }
-        
-
-
 
     }
 
@@ -98,6 +67,4 @@ public class HamsterScript : MonoBehaviour {
 
         this.enabled = false;
     }
-
-    
 }
