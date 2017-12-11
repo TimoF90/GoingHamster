@@ -11,8 +11,6 @@ public class HamsterScript : MonoBehaviour {
     public float MaxDragDistance = 2f;
     public float JumpEnergy = 5f;
     public float JumpPower = 100f;
-    public GameObject HighscoreCanvas;
-    public float yPosition;
     
 
 

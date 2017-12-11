@@ -20,15 +20,23 @@ public class ScoreManager : MonoBehaviour {
     public GameObject HighscoreCanvas;
    
     public GameObject Player;
+    public Rigidbody2D rb;
+    private float speed;
+
+
     private Vector3 startPoint;
+    private bool stop = false;
+
+    public Transform player;
+    private float counter;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         
         scoreCount = 0f;
         highscoreCount = PlayerPrefs.GetFloat("aaa", 0);
-        
+        rb.GetComponent<Rigidbody2D>();
         startPoint = ScoreMarker.transform.position;
         
     }
@@ -36,14 +44,28 @@ public class ScoreManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+      /*  if (player.transform.position.y < -3)
+        {
 
-        
+            float counter = +1;
+            if (player.transform.position.y < -3 && counter < 10)
+            {
+                highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount) + "NEUER HIGHSCORE!!!";
+            }
+
+
+        }*/
+
+
+
 
         if (Player.transform.position.x >= ScoreMarker.transform.position.x)
         {
             
             
           scoreCount = Player.transform.position.x - startPoint.x;
+          
+            
            
 
         }
@@ -51,6 +73,7 @@ public class ScoreManager : MonoBehaviour {
         if (scoreCount > highscoreCount)
         {
             highscoreCount = scoreCount;
+
         }
 
         if(highscoreCount > PlayerPrefs.GetFloat("aaa"))
@@ -59,6 +82,16 @@ public class ScoreManager : MonoBehaviour {
             PlayerPrefs.SetFloat("aaa", highscoreCount);
         }
 
+        speed = rb.velocity.magnitude;
+        Time.timeScale = 1.0f;
+
+        if (speed == 0f)
+        {
+
+            HighscoreCanvas.SetActive(true);
+        }
+
+
             
 
     
@@ -66,13 +99,12 @@ public class ScoreManager : MonoBehaviour {
        
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
         highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount);
-        highscoreText2.text = "" + Mathf.Round(highscoreCount);
+        highscoreText2.text = "" + Mathf.Round(scoreCount);
 
         
-
-
-
     }
+
+    
 
    
 }

@@ -240,7 +240,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Timo Fitzner/OneDrive - haw-hamburg.de/IMP/Git Project/GoingHamster/GoingHamster/GoingHamster/user.keystore
+  AndroidKeystoreName: C:/Users/Timo Fitzner/OneDrive - haw-hamburg.de/IMP/Git Project/GoingHamster/GoingHamster/GoingHamster/GoingHamster/key.keystore
   AndroidKeyaliasName: goinghamster
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
