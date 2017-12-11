@@ -9,8 +9,10 @@ public class PauseMenu : MonoBehaviour
     public string mainMenu;
     public string GameScene;
 
-    public bool isPaused;
+    public bool isPaused = false;
     public GameObject pauseMenuCanvas;
+
+    
 
 
     
@@ -19,18 +21,7 @@ public class PauseMenu : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {/*
-        if (isPaused)
-        {
-            pauseMenuCanvas.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            pauseMenuCanvas.SetActive(false);
-            Time.timeScale = 1f;
-        }
-       */
+    {
 
     }
 
@@ -39,16 +30,11 @@ public class PauseMenu : MonoBehaviour
       
             pauseMenuCanvas.SetActive(true);
             Time.timeScale = 0f;
-        /*        else
-        {
-            pauseMenuCanvas.SetActive(false);
-            Time.timeScale = 1f;
-        }
-        */
+        isPaused = true;
     }
         
         
-          //  isPaused = !isPaused;
+          
         
     public void Restart()
     {
@@ -61,6 +47,7 @@ public class PauseMenu : MonoBehaviour
         // isPaused = false;
         pauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void Quit()

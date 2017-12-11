@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: Menu
   GameScene: MainScene
-  isPaused: 0
+  isPaused: 1
   pauseMenuCanvas: {fileID: 1783037896}
 --- !u!1001 &1625013623
 Prefab:

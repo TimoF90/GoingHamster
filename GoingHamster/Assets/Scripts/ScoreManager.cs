@@ -25,10 +25,11 @@ public class ScoreManager : MonoBehaviour {
 
 
     private Vector3 startPoint;
-    private bool stop = false;
+    private PauseMenu pauseMenu;
+    private float time;
 
     public Transform player;
-    private float counter;
+    
 
 
     // Use this for initialization
@@ -38,70 +39,57 @@ public class ScoreManager : MonoBehaviour {
         highscoreCount = PlayerPrefs.GetFloat("aaa", 0);
         rb.GetComponent<Rigidbody2D>();
         startPoint = ScoreMarker.transform.position;
-        
+        Time.timeScale = 1.0f;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-      /*  if (player.transform.position.y < -3)
-        {
+        speed = rb.velocity.magnitude;
+        time = Time.timeScale;
 
-            float counter = +1;
-            if (player.transform.position.y < -3 && counter < 10)
-            {
-                highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount) + "NEUER HIGHSCORE!!!";
-            }
-
-
-        }*/
-
-
-
+       
+        
+        
 
         if (Player.transform.position.x >= ScoreMarker.transform.position.x)
         {
             
-            
           scoreCount = Player.transform.position.x - startPoint.x;
           
-            
-           
-
         }
 
         if (scoreCount > highscoreCount)
         {
             highscoreCount = scoreCount;
-
-        }
+         }
 
         if(highscoreCount > PlayerPrefs.GetFloat("aaa"))
         {
-
             PlayerPrefs.SetFloat("aaa", highscoreCount);
-        }
+        }   
+        
 
-        speed = rb.velocity.magnitude;
-        Time.timeScale = 1.0f;
-
-        if (speed == 0f)
-        {
+        if (speed == 0f){
+            
 
             HighscoreCanvas.SetActive(true);
         }
 
-
-            
-
-    
-
        
+
+
+
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
         highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount);
         highscoreText2.text = "" + Mathf.Round(scoreCount);
 
-        
+        if (pauseMenu.isPaused == true)
+        {
+            Time.timeScale = 0f;
+        }
+
     }
 
     
