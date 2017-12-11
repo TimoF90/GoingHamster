@@ -10,11 +10,11 @@ public class ScoreManager : MonoBehaviour {
     public Text highscoreText;
     public Text highscoreText2;
 
-    public static float scoreCount;
-    public static float highscoreCount;
+    public static int scoreCount;
+    public static int highscoreCount;
 
-       
-    public bool scoreIncreasing;
+    private int score1;
+    
     public Transform ScoreMarker;
 
     public GameObject HighscoreCanvas;
@@ -28,60 +28,63 @@ public class ScoreManager : MonoBehaviour {
     private PauseMenu pauseMenu;
     private float time;
 
-    public Transform player;
+    private CoinScript theCoinScript;
+
+    
     
 
 
     // Use this for initialization
     void Start () {
         
-        scoreCount = 0f;
-        highscoreCount = PlayerPrefs.GetFloat("aaa", 0);
+        scoreCount = 0;
+        highscoreCount = PlayerPrefs.GetInt("aaa", 0);
         rb.GetComponent<Rigidbody2D>();
         startPoint = ScoreMarker.transform.position;
         Time.timeScale = 1.0f;
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
 
         speed = rb.velocity.magnitude;
         time = Time.timeScale;
 
-       
-        
-        
-
         if (Player.transform.position.x >= ScoreMarker.transform.position.x)
         {
-            
-          scoreCount = Player.transform.position.x - startPoint.x;
-          
+            scoreCount = (int)Player.transform.position.x - (int)startPoint.x;
+            //score1 = scoreCount;
+
+
         }
 
         if (scoreCount > highscoreCount)
         {
             highscoreCount = scoreCount;
-         }
+        }
 
-        if(highscoreCount > PlayerPrefs.GetFloat("aaa"))
+        if (highscoreCount > PlayerPrefs.GetInt("aaa"))
         {
-            PlayerPrefs.SetFloat("aaa", highscoreCount);
-        }   
-        
+            PlayerPrefs.SetInt("aaa", highscoreCount);
+        }
 
-        if (speed == 0f){
-            
+
+        if (speed == 0f)
+        {
+
 
             HighscoreCanvas.SetActive(true);
         }
 
-       
+
+        scoreCount += score1;
 
 
-
-        scoreText.text = "Score: " + Mathf.Round(scoreCount);
+        scoreText.text = "Score: " + scoreCount;
         highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount);
         highscoreText2.text = "" + Mathf.Round(scoreCount);
 
@@ -90,9 +93,17 @@ public class ScoreManager : MonoBehaviour {
             Time.timeScale = 0f;
         }
 
+    }   
+
+    public void AddPoints (int pointsToAdd)
+    {
+        score1 += pointsToAdd;
     }
-
-    
-
    
+
+
+
+
+
+
 }

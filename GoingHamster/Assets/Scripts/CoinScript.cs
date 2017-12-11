@@ -5,22 +5,25 @@ using UnityEngine;
 public class CoinScript : MonoBehaviour
 {
 
+    public int coinPoints;
+  
+    private ScoreManager theScoreManager;
 
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-
+        theScoreManager = FindObjectOfType<ScoreManager>();
     }
-        void OnCollisionEnter2D(Collision2D coll)
-        {
-            if (coll.gameObject.tag.Equals ("Player"))
+
+    
+   void OnTriggerEnter2D(Collider2D other)
+    {
+            if (other.tag =="Player")
             {
-                ScoreManager.scoreCount += 10;
-                Destroy(gameObject);
+            theScoreManager.AddPoints(coinPoints);
+            Destroy(gameObject);
             }
 
-
+       
         
     }
 }
