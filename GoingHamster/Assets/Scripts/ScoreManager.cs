@@ -22,11 +22,12 @@ public class ScoreManager : MonoBehaviour {
     public GameObject Player;
     public Rigidbody2D rb;
     private float speed;
+    private float time;
 
 
     private Vector3 startPoint;
     private PauseMenu pauseMenu;
-    private float time;
+    
 
     private CoinScript theCoinScript;
 

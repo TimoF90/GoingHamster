@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScrollingBackground : MonoBehaviour {
 
+
+    public bool scrolling, paralax;
     public float backgroundSize;
     public float paralaxSpeed;
 
@@ -62,16 +64,24 @@ public class ScrollingBackground : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        float deltaX = cameraTransform.position.x - lastCameraX;
-        transform.position += Vector3.right * (deltaX * paralaxSpeed);
+        if (paralax)
+        {
+            float deltaX = cameraTransform.position.x - lastCameraX;
+            transform.position += Vector3.right * (deltaX * paralaxSpeed);
+
+        }
+
         lastCameraX = cameraTransform.position.x;
 
-        if (cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
-            ScrollLeft();
+        if (scrolling)
+        {
+            if (cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
+                ScrollLeft();
 
-        if (cameraTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
-            ScrollRight();
+            if (cameraTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
+                ScrollRight();
 
+        }
     }
 }
 
