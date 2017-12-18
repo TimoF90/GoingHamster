@@ -16,6 +16,7 @@ public class HamsterScript : MonoBehaviour {
 
     private bool isPressed = false;
     private int releaseCounter = 0;
+    private float time, speed;
 
 
     
@@ -41,9 +42,15 @@ public class HamsterScript : MonoBehaviour {
 
     void OnMouseDown()
     {
-        isPressed = true;
-        rb.isKinematic = true;
 
+        speed = rb.velocity.magnitude;
+        time = Time.timeScale;
+
+        if (speed < 1)
+        {
+            isPressed = true;
+            rb.isKinematic = true;
+        }
         
     }
 
