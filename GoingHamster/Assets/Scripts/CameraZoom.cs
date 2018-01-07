@@ -10,6 +10,8 @@ public class CameraZoom : MonoBehaviour {
 
     private float count, count1;
     private float time, speed;
+    private PauseMenu pauseMenu;
+
 
 
     // Use this for initialization
@@ -22,6 +24,7 @@ public class CameraZoom : MonoBehaviour {
     void Update()
     {
 
+        
         speed = rb.velocity.magnitude;
         time = Time.timeScale;
 
@@ -44,7 +47,12 @@ public class CameraZoom : MonoBehaviour {
                 zoomSize -= 0.05f;
                 count1 = 0;
             }
-        } 
+        }
+
+        if (pauseMenu.isPaused == true)
+        {
+            Time.timeScale = 0f;
+        }
 
         GetComponent<Camera> ().orthographicSize = zoomSize;
     }

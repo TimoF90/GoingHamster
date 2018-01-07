@@ -63,6 +63,8 @@ public class ScoreManager : MonoBehaviour {
 
         }
 
+        scoreCount += score1;
+
         if (scoreCount > highscoreCount)
         {
             highscoreCount = scoreCount;
@@ -82,7 +84,7 @@ public class ScoreManager : MonoBehaviour {
         }
 
 
-        scoreCount += score1;
+        
 
 
         scoreText.text = "Score: " + scoreCount;

@@ -18,8 +18,11 @@ public class HamsterScript : MonoBehaviour {
     private int releaseCounter = 0;
     private float time, speed;
 
+    private void Start()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
 
-    
 
     void Update()
     {
